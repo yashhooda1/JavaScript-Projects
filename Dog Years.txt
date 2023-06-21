@@ -1,0 +1,38 @@
+//Name: Yash Hooda
+//Date Created: 07/19/2022
+/* This JavaScript file converts a human age into dog years. You are more then welcome to use and modify this code however you like it lol. */
+
+//Opening Statement
+console.log('Welcome to Dog Years!');
+
+//set my age to 20
+var myAge = 20;
+
+//find early years
+var earlyYears = 2;
+earlyYears *= 10.5;
+
+//Calculate later years
+var laterYears = myAge - 2;
+
+//Calculate number of dog years accounted for by later years
+laterYears *= 4;
+
+//print early years and later years
+console.log('Early Years: ' + earlyYears);
+console.log('Later Years: ' + laterYears);
+
+//calculate your age in dog years
+var myAgeInDogYears = earlyYears + laterYears;
+
+//initialize myName
+var myName = 'Yash Hooda';
+
+//lowercase my name
+console.log(myName.toLowerCase())
+
+//print out statement
+console.log('My name is ' + myName + '. I am ' + myAge + ' years old in human years which is ' + myAgeInDogYears + ' years old in dog years.');
+
+
+

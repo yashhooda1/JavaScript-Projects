@@ -1,0 +1,24 @@
+console.log('Welcome to Temperature Conversion Calculator!');
+
+//set kelvin temperature 
+var kelvin = 0;
+
+//find celsius;
+var celsius = kelvin - 273;
+
+//find fahrenheit
+var fahrenheit = celsius * (9/5) + 32;
+
+//round down the fahrenheit temperature
+console.log(Math.floor(fahrenheit));
+
+//Print out temperature
+console.log('The temperature is ' + fahrenheit + ' degrees Fahrenheit.');
+
+var newton = celsius * (33/100);
+//round down newton temperature
+console.log(Math.floor(newton));
+
+//print out Newton Temperature
+console.log('The temperature is ' + newton + ' degrees newton.');
+

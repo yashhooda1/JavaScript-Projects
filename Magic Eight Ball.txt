@@ -1,0 +1,46 @@
+//Magic 8 Ball Project
+//Name: Yash Hooda
+//Date Created: 08.02.2022
+//This project creates a fun interactive magic 8 ball game. You are more then welcome to edit and reuse this project.
+
+//initialize userName
+let userName = '';
+
+//if else statement in ternary form
+userName = 'Jane' ? console.log('Hello, Jane!')
+: console.log('Hello!');
+
+//ask question for magic 8 ball
+let userQuestion = 'What do you wanna say?';
+
+//print the question
+console.log(userQuestion);
+
+//assign random number
+let randomNumber = Math.floor(Math.random() * 8);
+
+//initialize eight ball variable
+let eightBall = '';
+
+switch (randomNumber) {
+case 0: 'It is certain';
+break;
+case 1: 'It is decidely so';
+break;
+case 2: 'Reply hazy try again';
+break;
+case 3: 'Cannot predict now';
+break;
+case 4: 'Do not count on it';
+break;
+case 5: 'My sources say no';
+break;
+case 6: 'Outlook not so good';
+break;
+case 7: 'Signs point to yes';
+break;
+default: 'Stop asking me weird questions you creep.';
+break;
+}
+
+

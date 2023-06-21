@@ -1,0 +1,110 @@
+const getUserChoice = userInput => {
+  userInput = userInput.toLowerCase();
+  //check user input for rock, paper, or scissors.
+  if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb')
+  {
+    //return rock, paper, or scissors.
+    return userInput;
+  }
+  else 
+  {
+    //if user input is not rock, paper, or scissors print error message 
+    console.log('Error. Please check input and try again later.');
+  }
+}
+
+//console.log(getUserChoice('paper')); // should print 'paper'
+//console.log(getUserChoice('fork')); //should print 'Error!' and 'undefined'
+
+const getComputerChoice = () => {
+  const randomNumber = Math.floor(Math.random() * 3)
+  switch (randomNumber) {
+    case 0: 
+     return 'rock';
+    case 1: 
+      return 'paper';
+    case 2:
+      return 'scissors';
+  }
+};
+
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+const determineWinner = (userChoice, computerChoice) => {
+  if (userChoice === computerChoice) {
+    return 'This game is a tie!';
+  }
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      return "Sorry, computer won!";
+    }
+    else {
+      return "Congratulations, you won!";
+    }
+  }
+  if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      return "Sorry, computer won!";
+    }
+    else {
+      return "Congratulations, you won!";
+    }
+  }
+
+if (userChoice === 'paper') {
+    if (computerChoice === 'rock') {
+       return "Congratulations, you won!";
+    }
+    else {
+      return "Sorry, computer won!";
+    }
+  }
+
+if (userChoice === 'scissors') {
+    if (computerChoice === 'paper') {
+       return "Congratulations, you won!";
+    }
+    else {
+      return "Sorry, computer won!";
+    }
+  }
+
+if (userChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+      return "Sorry, computer won!";
+    }
+    else {
+      return "Congratulations, you won!";
+    }
+  }
+
+  if(userChoice === 'bomb') {
+    return "Congratulations, you won!";
+  }
+
+};
+
+//console.log(determineWinner('rock', 'scissors'));
+//console.log(determineWinner('paper', 'scissors'));
+//console.log(determineWinner('rock', 'rock'));
+
+const playGame = () => {
+  const userChoice = getUserChoice('paper');
+  const computerChoice = getComputerChoice();
+  console.log('You threw: ' + userChoice);
+  //console.log('You threw: ${userChoice}');
+  console.log('Computer threw: ' + computerChoice);
+
+  console.log(determineWinner(userChoice, computerChoice));
+};
+
+playGame()
+
+
+
+
+
+
+
